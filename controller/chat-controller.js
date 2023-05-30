@@ -124,7 +124,7 @@ exports.renameChatGroup = async (req, res) => {
     if (!updateChat) {
       return res.status(400).json({ message: "Chat Not Found" });
     } else {
-      return res.status(400).json(updateChat);
+      return res.status(200).json(updateChat);
     }
   } catch (error) {
     console.log(error);

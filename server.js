@@ -5,6 +5,7 @@ const userRoutes=require("./routes/user-routes");
 const {errorHandler,notFound}=require("./middleware/error-middleware");
 const cors=require("cors");
 const chatRoutes=require("./routes/chat-routes")
+const messageRoutes=require("./routes/message-routes")
 
 connectDB();
 const app=express();
@@ -13,6 +14,7 @@ app.use(cors())
 
 app.use("/api/user",userRoutes);
 app.use("/api/chats",chatRoutes);
+app.use("/api/message",messageRoutes);
 // app.use(notFound)
 app.use(errorHandler)
 
